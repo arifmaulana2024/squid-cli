@@ -1,6 +1,6 @@
 import { api } from './api';
 
-export async function me(): Promise<{ username: string }> {
+export async function profile(): Promise<{ username: string }> {
   const { body } = await api<{ username: string }>({
     method: 'get',
     path: `/client/me`,

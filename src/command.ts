@@ -14,6 +14,7 @@ export abstract class CliCommand extends Command {
             `Authentication failure. Please obtain a new deployment key at https://app.subsquid.io and follow the instructions`,
           );
         case 400:
+        case 405:
           this.error(body.message);
           return;
         case 404:
